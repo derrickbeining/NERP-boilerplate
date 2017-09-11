@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/GraceShopperProject/boilerplate#readme",
   "dependencies": {
+    "body-parser": "^1.18.0",
     "express": "^4.15.4",
     "path": "^0.12.7",
     "react": "^15.6.1",
@@ -40,6 +41,8 @@
     "sass-loader": "^6.0.6",
     "source-map": "^0.5.7",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "volleyball": "^1.4.1",
     "webpack": "^3.5.6"
   }
 }
