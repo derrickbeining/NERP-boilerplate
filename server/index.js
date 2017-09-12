@@ -2,15 +2,21 @@ require('../env')
 const path = require('path')
 const express = require('express')
 const app = express()
-const middlewareRoute
+const rootRouter = require('./routes')
 
 
-app.get('*', (req, res, next) => {
-  res.sendFile(path.join(process.env.PWD, './browser/root/index.html'))
-})
+const httpLogger = require('volleyball')
+const {json, urlencoded} = require('body-parser')
+
+app.use(
+  httpLogger,
+  json(),
+  urlencoded({extended: true}),
+  express.static(path.join(process.env.PWD, './browser/built')),
+  rootRouter
+)
 
 const PORT = process.env.SERVER_PORT
-
 app.listen(PORT, () => {
   console.log(`server is listening at port ${PORT}`)
 })

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "start-dev": "webpack -w browser/public & nodemon -w server -e js server/index.js",
+    "start-dev": "webpack -w browser/public & nodemon -w server -e js,scss server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/GraceShopperProject/boilerplate#readme",
   "dependencies": {
     "body-parser": "^1.18.0",
+    "chalk": "^2.1.0",
     "express": "^4.15.4",
     "path": "^0.12.7",
     "react": "^15.6.1",

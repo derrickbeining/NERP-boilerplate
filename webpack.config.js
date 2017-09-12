@@ -1,7 +1,7 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  entry: './browser/public/js/',
+  entry: './browser/public/js',
   output: {
     path: process.env.PWD + '/browser/built/',
     filename: './bundle.js'
@@ -29,7 +29,7 @@ module.exports = {
 
     ]
   },
-  plugins: [
-    new UglifyJSPlugin()
-  ]
+  // plugins: [
+  //   new UglifyJSPlugin()
+  // ]
 };
